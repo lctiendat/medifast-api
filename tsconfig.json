@@ -18,14 +18,17 @@
     "forceConsistentCasingInFileNames": false,
     "noFallthroughCasesInSwitch": false,
     "paths": {
-      "@entity" : ["src/entity"],
-      "@service" : ["src/service"],
-      "@controller" : ["src/controller"],
-      "@dto" : ["src/dto"],
+      "@entity": ["src/entity"],
+      "@service": ["src/service"],
+      "@controller": ["src/controller"],
+      "@dto": ["src/dto"],
       "@module ": ["src/module"],
-      "@repository" : ["src/repository"],
-      "@setup" : ["src/setup"],
-      "@module": ["src/module"]
+      "@repository": ["src/repository"],
+      "@setup": ["src/setup"],
+      "@module": ["src/module"],
+      "@shared": ["src/shared"],
+      "@util": ["src/shared/util"],
+      "@filter": ["src/shared/filter"]
     }
   }
 }

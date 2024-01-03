@@ -1,27 +1,26 @@
 import { Module } from '@nestjs/common';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { appConfig } from '@setup';
-import { OtherModule } from '@module';
-import { CategoryController } from './module/other/controller';
+import { CategoryModule } from '@module';
 
 @Module({
   imports: [
-    // TypeOrmModule.forRoot({
-    //    'type': 'mysql',
-    //    'host': appConfig.DB_HOST,
-    //    'port': appConfig.DB_PORT,
-    //    'username': appConfig.DB_USERNAME,
-    //    'password': appConfig.DB_PASSWORD,
-    //    'database': appConfig.DB_NAME,
-    //    'entities': ['dist/**/*.model{.ts,.js}'],
-    //    'synchronize': true,
-    // })
-    // OtherModule
+    CategoryModule,
+    TypeOrmModule.forRoot({
+      'type': 'mysql',
+      'host': appConfig.DB_HOST,
+      'port': appConfig.DB_PORT,
+      'username': appConfig.DB_USERNAME,
+      'password': appConfig.DB_PASSWORD,
+      'database': appConfig.DB_NAME,
+      'autoLoadEntities': true,
+      'synchronize': true,
+    }),
   ],
   controllers: [
-    CategoryController
+   
   ],
   providers: [],
 })
-export class AppModule {}
+export class AppModule { }
 

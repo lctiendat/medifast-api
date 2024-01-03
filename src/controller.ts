@@ -1,1 +1,2 @@
-export * from './module/other/controller'
+
+export * from './module/user/controller'

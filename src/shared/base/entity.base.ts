@@ -5,12 +5,12 @@ import { faker } from '@faker-js/faker';
 
 
 @Entity()
-export class Base {
+export class BaseEntity {
 
     @PrimaryGeneratedColumn('uuid')
     @IsUUID()
     @ApiProperty({
-        example: faker.datatype.uuid()
+        example: faker.string.uuid()
     })
     id?: string
 
